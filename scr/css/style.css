@@ -734,7 +734,7 @@ margin: 0;
     
     overflow: visible;
     position: relative; /* Для z-index */
-  
+     
   }
 
   .swiper-wrapper {
@@ -755,8 +755,9 @@ margin: 0;
     transform: translateY(0);
     display: flex;
     flex-direction: column;
-    justify-content:space-between ;
-    gap: 50px;
+    bottom: 10px;
+    left: 10px
+   
   }
 
   .Feature_Projects {
@@ -807,25 +808,12 @@ margin: 0;
 }
 
 
-.swiper-slide button {
-  margin-top: 10px;
-  padding: 11px 20px;
-   background-color: #1b1a1a;
-  color: #cec4bc;
-  border: none;
-  cursor: pointer;
-  border-radius: 25px;
-  text-transform: none;
-  width: 133px;
-  height: 46px;
-  font-size: 16px;
-  line-height: 24px;
-}
+
 
 
 
 .swiper-slide h3 {
-  font-size: 23px;
+  font-size: 20px;
   line-height: 30px;
 color: #403E3B;
 font-weight: 400;
@@ -840,7 +828,55 @@ color: #645C55;
  
 
 }
+
+.swiper-slide button {
+  
+  
+  padding: 10px 10px;
+   background-color: #1b1a1a;
+  color: #cec4bc;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  text-transform: none;
+  width: 100px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 20px;
+ 
 }
+
+
+
+.swiper-slide h3 {
+  font-size: 23px;
+  line-height: 30px;
+color: #403E3B;
+font-weight: 400;
+
+
+
+}
+
+.swiper-slide p {
+  font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+color: #645C55;
+ 
+
+}
+
+
+
+
+
+
+}
+
+
+
+
      
   
 
@@ -1096,6 +1132,7 @@ line-height: 36px;
 }
 
 .swiper-slide button {
+  position: absolute;
   margin-top: 10px;
   padding: 11px 20px;
    background-color: #1b1a1a;
@@ -1108,29 +1145,55 @@ line-height: 36px;
   height: 46px;
   font-size: 16px;
   line-height: 24px;
+  top: 0;
+  right: 10;
 }
 
 
 
 .swiper-slide h3 {
   font-size: 23px;
-  line-height: 30px;
+  line-height: 0px;
 color: #403E3B;
 font-weight: 400;
+
+
 
 }
 
 .swiper-slide p {
   font-weight: 400;
 font-size: 14px;
-line-height: 20px;
+line-height: 0px;
 color: #645C55;
  
 
 }
 
 
+.info-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 120px;
+  
+}
 
+.button-content {
+  position: relative;
+}
+
+.slide-content {
+    opacity: 1;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    bottom: 100px;
+    left: 30px;
+    gap: 100px;
+    
+   
+  }
 
 }
 
