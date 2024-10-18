@@ -59,3 +59,41 @@ document.addEventListener("DOMContentLoaded", () => {
     grabCursor: true,
   });
 });
+
+
+// ========================================== Second slider ======================================================
+
+document.addEventListener("DOMContentLoaded", () => {
+  const secondSwiper = new Swiper(".swiper-second-container", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+    mousewheel: {
+      enabled: true,
+      sensitivity: 1,
+    },
+    breakpoints: {
+      360: {
+        slidesPerView: 3, // Show 3 slides in a row for screens between 360px and 760px
+      },
+      760: {
+        slidesPerView: 3,
+        loop: false, // Disable looping for larger screens
+        autoplay: false,
+      },
+    },
+    // Ensure proper touch and mouse drag functionality
+    touchEventsTarget: "container",
+    simulateTouch: true,
+    grabCursor: true,
+    allowTouchMove: true,
+  });
+});
+
