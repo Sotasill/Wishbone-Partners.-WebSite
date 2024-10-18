@@ -1,3 +1,40 @@
+
+
+
+
+
+// Получаем элементы
+const burgerButton = document.getElementById("burgerButton");
+const mobileMenu = document.getElementById("mobileMenu");
+const modalCloseBtn = document.getElementById("modalCloseBtn");
+const backdrop = document.getElementById("backdrop");
+
+// Функция для закрытия модального окна и скрытия фона
+function closeModal() {
+  mobileMenu.classList.remove("active");
+  backdrop.classList.remove("active");
+}
+
+// Переключение модального окна и фона при нажатии на кнопку бургер
+burgerButton.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+  backdrop.classList.toggle("active");
+});
+
+// Закрытие модального окна при нажатии на кнопку закрытия
+modalCloseBtn.addEventListener("click", closeModal);
+
+// Закрытие модального окна при клике на фон
+backdrop.addEventListener("click", closeModal);
+
+// Закрытие модального окна при нажатии клавиши Escape
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeModal();
+  }
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const swiper = new Swiper(".swiper-container", {
     slidesPerView: 1,
@@ -60,40 +97,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-// ========================================== Second slider ======================================================
-
-document.addEventListener("DOMContentLoaded", () => {
-  const secondSwiper = new Swiper(".swiper-second-container", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-    },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true,
-    },
-    mousewheel: {
-      enabled: true,
-      sensitivity: 1,
-    },
-    breakpoints: {
-      360: {
-        slidesPerView: 3, // Show 3 slides in a row for screens between 360px and 760px
-      },
-      760: {
-        slidesPerView: 3,
-        loop: false, // Disable looping for larger screens
-        autoplay: false,
-      },
-    },
-    // Ensure proper touch and mouse drag functionality
-    touchEventsTarget: "container",
-    simulateTouch: true,
-    grabCursor: true,
-    allowTouchMove: true,
-  });
-});
 

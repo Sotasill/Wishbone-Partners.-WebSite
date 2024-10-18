@@ -293,6 +293,7 @@ a {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  max-width: 1200px;
 }
 
 /* Стили для каждого слайда */
@@ -390,6 +391,10 @@ a {
   background-color: #cec4bc;
 }
 
+.our-team-title {
+  margin-bottom: 40px;
+}
+
 .our-team-title h2{
   text-align: center;
   font-weight: 400;
@@ -416,49 +421,49 @@ a {
   text-align: center; 
   transition: background-color 0.3s;
   text-transform: uppercase;
+  
 }
 
-.swiper-second-container {
-  width: 100%;
-  overflow: hidden;
-  padding-bottom: 20px;
+.our-team-title button:hover {
+  background-color: #cf7932;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
-.swiper-second-wrapper {
+.our-team .team-members {
   display: flex;
-  transition: transform 0.3s ease-in-out;
+  flex-wrap: wrap; /* Allows the items to wrap onto multiple lines */
+  justify-content: space-between; /* Distributes space between items */
+  gap: 40px; /* Space between items */
 }
 
-.swiper-second-slide {
-  flex: 0 0 100%; /* Default for small screens */
+.team-member {
+  flex: 1 1 calc(20% - 20px); /* Adjusts size, ensures responsiveness */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
+  flex-direction: column; /* Aligns items vertically */
+  align-items: center; /* Centers content horizontally */
+  text-align: center; 
+  border: 1px solid #e9e6e3;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.swiper-second-img img {
-  border-radius: 50%;
-  margin-bottom: 10px;
+.team-member:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
 
-.swiper-second-text h4 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 5px;
+.team-member-img {
+  margin-bottom: 5px; /* Space between image and text */
 }
 
-.swiper-second-text p {
-  font-size: 14px;
-  color: #666;
+.team-member-text h4 {
+  margin: 0; /* Removes default margin */
 }
 
-.swiper-second-slide {
-    flex: 0 0 33.33%; /* 3 slides in a row */
-  }
-
-
+.team-member-text p {
+  margin: 0; /* Removes default margin */
+  line-height: 1.2; /* Adjusts line height for closer spacing */
+}
 
 
 /* ===================================================== [760] =============================================================== */
@@ -840,6 +845,8 @@ margin: 0;
 
   .Feature_Projects {
   padding-top: 40px;
+  background-color: #F7F7F7;
+  
 }
 
 
@@ -872,19 +879,17 @@ margin: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-   transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
-
+  padding: 10px 20px; /* Добавьте padding для кнопки */
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  width: 200px; /* Установите фиксированную ширину */
+  height: 50px; /* Установите фиксированную высоту */
 }
 
 .Feature_Projects-btn:hover {
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  
-  border: 1px solid #cf7932;
-  border-radius: 4px;
-  
-  
+  border: 1px solid #cf7932; 
+  border-radius: 4px; 
 }
-
 
 
 
@@ -945,10 +950,35 @@ color: #645C55;
 
 }
 
+.our-team {
+  background-color: #ffffff;
+}
+
+.our-team-wrapper {
+  display: flex;
+  justify-content: space-between;
+  
+}
 
 
+ 
 
+  .our-team-title {
+    flex: 1; /* Allows title to take space on the left */
+    max-width: 300px; /* Optional: Limit width of title section */
+  }
 
+  .team-members {
+    flex: 2; /* Allows team members to take remaining space */
+    justify-content: flex-start; 
+    
+  }
+
+  .team-member{
+    border: none;
+  }
+
+  
 
 }
 
@@ -1272,6 +1302,27 @@ color: #645C55;
     
    
   }
+
+
+  .second {
+    max-width: 1440px;
+  }
+
+ .swiper-container {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет элементам переходить на новую строку */
+    justify-content: space-between; /* Распределяет элементы по горизонтали */
+  }
+
+  .swiper-slide.second {
+    flex: 0 0 calc(33.33% - 10px); /* Три слайда в верхнем ряду */
+    margin-bottom: 20px; /* Отступ между рядами */
+  }
+
+  .swiper-slide.second:nth-child(n+4) { /* Для нижнего ряда (4, 5) */
+    flex: 0 0 calc(50% - 10px); /* Два слайда в нижнем ряду */
+  }
+
 
 }
 
