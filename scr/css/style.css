@@ -1636,6 +1636,14 @@ color: #645C55;
  text-transform: none;
  font-weight: 400;
  max-width: 600px;
+  opacity: 0; /* Изначально скрыт */
+  transform: translateX(-50px); /* Сдвинут влево */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.get-in-touch h2.visible {
+  opacity: 1; /* Делаем видимым */
+  transform: translateX(0); /* Возвращаем в исходное положение */
 }
 
 .get-in-touch-btn {

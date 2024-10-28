@@ -322,3 +322,31 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(title);
   observer.observe(paragraph);
 });
+
+
+// ================================================================================================================
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const h2 = document.querySelector(".fade-in-h2");
+
+  // Функция для обработки видимости элемента
+  const handleIntersection = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        h2.classList.add("visible");
+
+        // Удаляем наблюдатель, чтобы не вызывать повторное срабатывание
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  // Настройка Intersection Observer
+  const observer = new IntersectionObserver(handleIntersection, {
+    threshold: 0.1, // Настройка порога срабатывания
+  });
+
+  // Наблюдаем за заголовком
+  observer.observe(h2);
+});
