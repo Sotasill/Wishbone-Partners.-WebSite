@@ -8,7 +8,7 @@ body {
   font-family: "Poppins" sans-serif;
   font-size: 16px;
   font-weight: 400;
-  max-width: 100%;
+  width: 100%;
   overscroll-behavior: none;
 }
 
@@ -528,7 +528,7 @@ a {
 
   justify-content: center;
   
-  background-color: #cec4bc;
+  background-color: #e9e6e3;
   padding-top: 40px;
 }
 
@@ -555,7 +555,7 @@ a {
     text-decoration: none; 
 }
 
-.footer-social-net a:hover .header__burger-icon {
+.footer-social-net a:hover{
     transform: scale(1.1);
 }
 
@@ -1087,7 +1087,7 @@ color: #645C55;
  flex-direction: unset;
  justify-content: space-between;
   background-color: #cec4bc;
-  padding: 60px 100px;
+  padding: 60px 80px;
   gap: 170px;
 }
 
@@ -1145,8 +1145,58 @@ width: 150px;
 .scroll-top-btn:hover {
   background-color: #555;
 }
+
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 200px;
+  padding: 60px 120px;
+  padding-bottom: 20px;
  
 
+}
+
+.footer-info {
+  display: block;
+  
+}
+   
+ .footer-logo {
+  display: block;
+ }
+
+ .footer-text {
+  display: flex;
+justify-content: left;
+ }
+ 
+
+ .footer-social-net {
+  display: block;
+  margin: 0;
+  padding: 0;
+ }
+
+
+ .scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 45px;
+  display: none;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+  
+}
+ 
 }
 
 
@@ -1545,6 +1595,61 @@ letter-spacing: .4px;
 .scroll-top-btn:hover {
   background-color: #555;
 }
+
+.footer {
+  background-color: #F7F7F7;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 800px;
+  max-width: 100%;
+  padding-bottom: 20px;
+  align-items: center;
+  
+ 
+
+}
+
+.footer-info {
+  margin: 0;
+  padding: 0;
+ font-size: 14px;
+ line-height: 15px;
+ width: 100%;
+ 
+
+  
+}
+   
+ .footer-logo {
+  display: block;
+  width: 250px;
+ }
+
+
+ 
+
+ .footer-social-net {
+  display: block;
+  margin: 0;
+  padding: 0;
+ }
+
+ .footer-svg {
+  width: 25px;
+  height: 25px;
+  
+ }
+
+ .footer-social-net a:hover{
+    transform: scale(1.4);
+    fill: #cf7932;
+}
+
  
 }
 
