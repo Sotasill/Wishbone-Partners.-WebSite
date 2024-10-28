@@ -10,6 +10,8 @@ body {
   font-weight: 400;
   width: 100%;
   overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
 }
 
 ul,
@@ -1211,7 +1213,7 @@ justify-content: left;
 
 
 
-@media (min-width: 1200px) {
+@media (max-width: 1440px) {
   .header {
     display: flex;
     justify-content: space-between;
