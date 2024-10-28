@@ -1,5 +1,7 @@
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: #ffffff;
@@ -7,6 +9,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   max-width: 100%;
+  overscroll-behavior: none;
 }
 
 ul,
@@ -464,6 +467,104 @@ a {
   margin: 0; /* Removes default margin */
   line-height: 1.2; /* Adjusts line height for closer spacing */
 }
+
+
+/* ==================================================== [GET IN TOUCH ==================================================== */
+
+
+
+.get-in-touch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.get-in-touch-info h4 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.get-in-touch-info h2 {
+ text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.get-in-touch-btn {
+   display: block; 
+  margin: 20px auto; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  background-color: #1b1a1a; 
+  color: #cec4bc;
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  text-align: center; 
+  transition: background-color 0.3s;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  text-transform: uppercase;
+  
+}
+
+.get-in-touch-btn:hover {
+  background-color: #cf7932;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+
+/* ======================================================[footer]=========================================================== */
+
+.footer {
+   display: flex;
+
+  justify-content: center;
+  
+  background-color: #cec4bc;
+  padding-top: 40px;
+}
+
+.footer-info {
+  display: none;
+}
+
+.footer-social-net ul {
+    display: flex; 
+    justify-content: space-around;
+    gap: 40px; 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    margin-top: 40px;
+}
+
+.footer-social-net li {
+    display: flex; 
+}
+
+.footer-social-net a {
+    color: #333; 
+    text-decoration: none; 
+}
+
+.footer-social-net a:hover .header__burger-icon {
+    transform: scale(1.1);
+}
+
+
+.scroll-top-btn {
+    display: none; 
+}
+
+
 
 
 /* ===================================================== [760] =============================================================== */
@@ -979,6 +1080,72 @@ color: #645C55;
   }
 
   
+/* =======================================================[Get in touch]====================================== */
+
+.get-in-touch {
+  display: flex;
+ flex-direction: unset;
+ justify-content: space-between;
+  background-color: #cec4bc;
+  padding: 60px 100px;
+  gap: 170px;
+}
+
+.get-in-touch-btn {
+  border: transparent;
+  background-color: transparent;
+  padding: 0;
+ transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 10px;
+  color: #1B1A1A;
+width: 150px;
+  font-size: 16px;
+  
+  
+ 
+
+}
+
+.get-in-touch-btn:hover {
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  background-color: transparent;
+  border: 1px solid #cf7932;
+  border-radius: 8px;
+
+}
+
+.get-in-touch h2 {
+  text-align: left;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.get-in-touch h4 {
+  text-align: left;
+}
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+  background-color: #555;
+}
+ 
 
 }
 
@@ -988,7 +1155,7 @@ color: #645C55;
      
   
 
-
+/* ======================================================== [1200px] =============================================== */
 
 
 
@@ -1324,5 +1491,60 @@ color: #645C55;
   }
 
 
+.get-in-touch {
+  gap: 454px;
+}
+
+.get-in-touch h4 {
+ font-size: 14px;
+ letter-spacing: 2px;
+ line-height: 20px;
+ margin-bottom: 0; 
+ 
+}
+
+.get-in-touch h2 {
+ font-size: 40px;
+ line-height: 42px;
+ margin-top: -5px;
+ text-transform: none;
+ font-weight: 400;
+ max-width: 600px;
+}
+
+.get-in-touch-btn {
+ font-size: 16px;
+line-height: 24px;
+letter-spacing: .4px;
+}
+
+.get-in-touch-btn:hover {
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  
+  border-radius: 8px;
+
+}
+
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+  background-color: #555;
+}
+ 
 }
 

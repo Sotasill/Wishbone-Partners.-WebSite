@@ -35,6 +35,9 @@ document.addEventListener("keydown", (event) => {
 });
 
 
+
+// ======================================================= слайдер =========================================
+
 document.addEventListener("DOMContentLoaded", () => {
   const swiper = new Swiper(".swiper-container", {
     slidesPerView: 1,
@@ -98,3 +101,47 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+//================================================== кнопка прокрутки ==============================================
+
+
+
+function toggleScrollTopButton() {
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+  if (window.innerWidth <= 360) {
+    scrollTopBtn.style.display = "none"; // Hide the button on small screens
+  } else {
+    scrollFunction(); // Check the scroll position to decide visibility
+  }
+}
+
+
+toggleScrollTopButton();
+
+
+window.addEventListener("resize", toggleScrollTopButton);
+
+// Show button when scrolling down
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+  // Only check scroll position if width is greater than 360
+  if (window.innerWidth > 360) {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      scrollTopBtn.style.display = "block"; // Show button if scrolled down
+    } else {
+      scrollTopBtn.style.display = "none"; // Hide button if near top
+    }
+  }
+}
+
+// Smooth scroll to the top when the button is clicked
+document.getElementById("scrollTopBtn").onclick = function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
