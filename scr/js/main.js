@@ -145,3 +145,180 @@ function scrollFunction() {
 document.getElementById("scrollTopBtn").onclick = function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const heroInfo = document.querySelector(".hero-info");
+
+  // Set up Intersection Observer
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show"); // Trigger the animation
+          observer.unobserve(entry.target); // Stop observing after first appearance
+        }
+      });
+    },
+    { threshold: 0.5 }
+  ); // Trigger when 50% of the block is visible
+
+  observer.observe(heroInfo); // Start observing the .hero-info block
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const heroInfo = document.querySelector(".hero-info");
+  const heroImg = document.querySelector(".hero-img");
+
+  // Set up Intersection Observer
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show"); // Trigger the animation
+          observer.unobserve(entry.target); // Stop observing after first appearance
+        }
+      });
+    },
+    { threshold: 0.5 }
+  ); // Trigger when 50% of the element is visible
+
+  // Observe both the text block and the image
+  observer.observe(heroInfo);
+  observer.observe(heroImg);
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".image-section-info");
+
+  const observerOptions = {
+    root: null, // отслеживаем вьюпорт
+    rootMargin: "0px",
+    threshold: 0.1, // процент видимости, чтобы активировать событие
+  };
+
+  const observerCallback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Если элемент в области видимости, добавляем класс
+        entry.target.classList.add("visible");
+      } else {
+        // Если элемент вышел из области видимости, убираем класс (опционально)
+        entry.target.classList.remove("visible");
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const headingH2 = document.querySelector(".Our-process h2"); // Выбор заголовка H2
+
+  const observerOptions = {
+    root: null, // Отслеживаем вьюпорт
+    rootMargin: "0px",
+    threshold: 0.1, // Процент видимости для активации события
+  };
+
+  const observerCallback = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Если элемент в области видимости, добавляем классы
+        headingH2.classList.add("visible");
+        headingH2.classList.add("highlight");
+
+        // Убираем выделение через 0.5 секунды
+        setTimeout(() => {
+          headingH2.classList.remove("highlight");
+        }, 500); // Время соответствует длительности перехода
+      } else {
+        // Если элемент вышел из области видимости, убираем классы
+        headingH2.classList.remove("visible");
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+  observer.observe(headingH2); // Наблюдаем за заголовком H2
+});
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const clientsInfo = document.querySelector(".clients-info");
+  const clientsIcons = document.querySelector(".clients-icons");
+
+  const observerOptions = {
+    root: null, // Отслеживаем вьюпорт
+    rootMargin: "0px",
+    threshold: 0.1, // Процент видимости для активации события
+  };
+
+  const observerCallback = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Если элемент в области видимости, добавляем классы
+        clientsInfo.classList.add("visible");
+        clientsIcons.classList.add("visible");
+      } else {
+        // Если элемент вышел из области видимости, убираем классы
+        clientsInfo.classList.remove("visible");
+        clientsIcons.classList.remove("visible");
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+  observer.observe(clientsInfo); // Наблюдаем за текстом
+  observer.observe(clientsIcons); // Наблюдаем за иконками
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const title = document.querySelector(".fade-in-title");
+  const paragraph = document.querySelector(".fade-in-paragraph");
+
+  // Функция для обработки видимости элементов
+  const handleIntersection = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        title.classList.add("visible");
+        setTimeout(() => {
+          paragraph.classList.add("visible");
+        }, 500); // Параграф появляется через 500 мс после заголовка
+
+        // Удаляем наблюдатель, чтобы не вызывать повторное срабатывание
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  // Настройка Intersection Observer
+  const observer = new IntersectionObserver(handleIntersection, {
+    threshold: 0.1, // Настройка порога срабатывания
+  });
+
+  // Наблюдаем за заголовком и параграфом
+  observer.observe(title);
+  observer.observe(paragraph);
+});
