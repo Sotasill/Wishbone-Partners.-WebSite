@@ -350,3 +350,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // Наблюдаем за заголовком
   observer.observe(h2);
 });
+
+
+
+
+
+
+
+
+
+
+
+ 

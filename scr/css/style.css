@@ -584,16 +584,12 @@ a {
   }
 
   .backdrop {
-    display: none; /* Backdrop not needed for larger screens */
+    display: none; 
   }
 
-  #burgerButton {
-    display: none; /* Hide the burger button */
-  }
+  
 
-  .backdrop {
-    display: none; /* No need for the backdrop on larger screens */
-  }
+ 
 
   .header {
     display: flex;
@@ -615,18 +611,17 @@ a {
   .nav-item-set {
     display: flex;
     flex-direction: row;
-    gap: 15px; /* Add spacing between the items */
+    gap: 15px; 
     list-style: none;
     justify-content: space-between;
     background-color: #ffffff;
     align-items: center;
-    /* Align text to the left for larger screens */
+   
   }
 
   .modal-btn {
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Horizontally center the text */
-    align-items: center;
+    display: flex; 
+    justify-content: center; 
     width: 100px;
     height: 20px;
     border-radius: 8px;
@@ -657,6 +652,154 @@ a {
   .modal-close-btn {
     display: none;
   }
+
+  
+ #burgerButton {
+    display: none;
+  }
+
+  .mobile-menu-nav {
+    display: block;
+    position: static;
+    background-color: transparent;
+    
+  }
+
+  .backdrop {
+    display: none; 
+  }
+
+  
+
+ 
+
+  .header {
+    
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    
+    
+  }
+
+  .mobile-menu-nav {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    padding-top: 0;
+    align-items: center;
+  }
+
+  .nav-item-set {
+    display: flex;
+    flex-direction: row;
+    gap: 15px; 
+    list-style: none;
+    justify-content: space-between;
+    background-color: #ffffff;
+    align-items: center;
+   
+  }
+
+  .modal-btn {
+    display: flex; 
+    justify-content: center; 
+    width: 50px;
+    height: 20px;
+    border-radius: 8px;
+    font-size: 14px;
+   padding: 0;
+   
+    
+    
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-item a {
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+
+
+  .nav-item a:hover {
+    border: 1px solid #cf7932;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  }
+
+  .modal-close-btn {
+    display: none;
+  }
+
+
+
+
+
+
+
+  
+
+
+  .header-wrapper {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 80px;
+  padding: 10px}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-bar {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-header-btn {
+  margin-left: auto; 
+  
+  
+}
+
+
+
+
+
+
+
+.nav-item-set {
+  display: flex;
+  gap: 20px; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  display: flex;
+}
+
+.modal-btn {
+  width: 90px;
+height: 24px;
+top: 11px;
+left: 20px;
+gap: 0px;
+opacity: 0px;
+margin-top: 9px;
+border-radius: 14px;
+padding: 20px
+
+}
+
+
+
 
   .hero {
     display: flex;
@@ -834,6 +977,7 @@ font-size: 16px;
 .our-process-icon-list img:hover {
   scale: 1.2;
 }
+
 
 
 
@@ -1215,36 +1359,82 @@ justify-content: left;
 
 @media (min-width: 1200px) {
   .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 340px;
+   
     padding-left: 120px;
     padding-right: 120px;
-    padding: 35px, 120px;
-    min-width: 1200px;
-  }
-
-  .nav-item-set {
-    display: flex;
-    flex-direction: row;
-    gap: 32px; /* Add spacing between the items */
-    list-style: none;
-  }
-
-  .modal-btn {
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Horizontally center the text */
-    align-items: center;
-    border: none;
-    width: 155px;
-    height: 46px;
-    border-radius: 8px;
-    font-size: 16px;
-    padding: 0;
-    line-height: 24px;
+    
     
   }
+
+  .logo-title {
+    margin-left: 30px;
+  }
+
+
+
+  
+
+
+  .header-wrapper {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 320px;
+  padding: 35px, 120px;}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-bar {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-header-btn {
+  margin-left: auto; 
+  
+  
+}
+
+
+
+
+
+
+
+.nav-item-set {
+  display: flex;
+  gap: 50px; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  display: flex;
+}
+
+.modal-btn {
+  width: 150px;
+height: 24px;
+top: 11px;
+left: 20px;
+gap: 0px;
+opacity: 0px;
+margin-top: 9px;
+border-radius: 14px;
+padding: 20px
+
+}
+
+
+
+
+
+
+
 
   .hero {
     max-height: 720px;
@@ -1304,9 +1494,7 @@ justify-content: left;
     margin-left: 40px;
   }
 
-  .container {
-    max-width: 1440px;
-  }
+  
 
  .image-section-info {
   opacity: 0;
